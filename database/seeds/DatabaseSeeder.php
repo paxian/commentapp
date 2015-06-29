@@ -12,10 +12,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+        //Model::unguard();
+        Eloquent::unguard();
 
         // $this->call(UserTableSeeder::class);
 
-        Model::reguard();
+        $this->call('CommentTableSeeder');
+        $this->command->info('Comment table seeded.');
+
+        //Model::reguard();
     }
 }

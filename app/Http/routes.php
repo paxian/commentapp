@@ -11,6 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', function(){
+  View::make('index'); // Will return app/views/index.php
 });
+
+// API Routes ----------------------
+Route::group(array('prefix' => 'api'), function(){
+  Route::resource('comments', 'CommentController',
+    array('only' => array('index', 'store', 'destroy')));
+});
+
+// Catch all route
+// App::missing(function($exception) {
+//     return View::make('index');
+// });
