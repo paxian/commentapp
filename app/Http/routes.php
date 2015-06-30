@@ -16,7 +16,7 @@
 // });
 
 Route::get('/', function(){
-  View::make('index'); // Will return app/views/index.php
+  return View::make('index'); // Will return app/views/index.php
 });
 
 // API Routes ----------------------

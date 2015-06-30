@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Comment;
+use Response;
+use Input;
+
 class CommentController extends Controller
 {
     /**
