@@ -29,7 +29,7 @@
       <!-- PAGE TITLE -->
       <div class="page-header">
         <h2>Laravel and Angular Single page application</h2>
-        <h4>Comment system</h4>
+        <h4>Comment system - Israel Cuautle</h4>
       </div>
 
       <!-- NEW COMMENT FORM -->

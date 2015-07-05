@@ -24,16 +24,6 @@ class CommentController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    // public function create()
-    // {
-    //     // this will be handled by angular.
-    // }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @return Response
@@ -47,6 +37,31 @@ class CommentController extends Controller
 
         return Response::json(array('success' => true));
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        Comment::destroy($id);
+
+        return Response::json(array('success' => true));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    // public function create()
+    // {
+    //     // this will be handled by angular.
+    // }
+
+
 
     /**
      * Display the specified resource.
@@ -81,16 +96,5 @@ class CommentController extends Controller
     //     //
     // }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function destroy($id)
-    {
-        Comment::destroy($id);
 
-        return Response::json(array('success' => true));
-    }
 }
